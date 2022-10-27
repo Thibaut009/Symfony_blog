@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    h2, h3 {text-align: center;}
+</style>
+
+<div class="example-wrapper">
+    <h2>{{ article.titre }} !</h2>
+    <h3>Crée le {{ article.datecreation|date("Y/m/d h:i:s") }}</h3>
+    <h3>{{ categorie.libelle }}</h3>
+    <p>{{ article.contenu }}</p>
+</div>
+{% endblock %}
